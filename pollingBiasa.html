@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Polling Biasa</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+	<a href="#home">Berita</a>
+	<div class="dropdown">
+		<button class="dropbtn" id="active">Polling
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="#">Polling Biasa</a>
+		  <a href="#">Polling Berita</a>
+		</div>
+	</div> 
+</div>
+<div class="container">
+  <h2>Polling Form</h2><br>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="urlberita">Deskripsi:</label>
+      <div class="col-sm-10">
+        <input type="urlberita" class="form-control" id="urlberita" name="urlberita">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="mulai">Waktu Mulai:</label>
+      <div class="col-sm-10">          
+        <input type="mulai" class="form-control" id="mulai" name="mulai">
+      </div>
+    </div>
+        <div class="form-group">
+      <label class="control-label col-sm-2" for="selesai">Waktu Selesai:</label>
+      <div class="col-sm-10">          
+        <input type="selesai" class="form-control" id="selesai" name="selesai">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pertanyaan">Pertanyaan Seputar Polling:</label>
+      <div class="col-sm-10">          
+        <input type="pertanyaan" class="form-control" id="pertanyaan" name="pertanyaan">
+      </div>
+    </div>    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
